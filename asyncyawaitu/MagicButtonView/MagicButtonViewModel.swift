@@ -1,12 +1,14 @@
 import Foundation
 
-@MainActor class MagicButtonViewModel: ObservableObject {
+class MagicButtonViewModel: ObservableObject {
     
     @Published var output: String = "🙈"
     
     private let center = NotificationCenter.default
     
-    public func sendNotification() {}
+    public func sendNotification() {
+        center.post(name: .asyncAwaity, object: nil)
+    }
     
     private func present(_ result: String) async throws {
         output = result
