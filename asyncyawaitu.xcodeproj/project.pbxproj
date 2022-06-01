@@ -1,0 +1,418 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		66206E6F284507E9008819D9 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66206E6E284507E9008819D9 /* Ticker.swift */; };
+		6625C6B82840F1EB0094D036 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6B72840F1EB0094D036 /* UIImage+Color.swift */; };
+		6625C6BA2840F2950094D036 /* ThumnailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6B92840F2950094D036 /* ThumnailRepository.swift */; };
+		6625C6BC284108FB0094D036 /* UIImage+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6BB284108FB0094D036 /* UIImage+Merge.swift */; };
+		6625C6BF2844F6A80094D036 /* LuckGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6BE2844F6A80094D036 /* LuckGenerator.swift */; };
+		6625C6C12844F76E0094D036 /* IamFeelingLuckyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6C02844F76E0094D036 /* IamFeelingLuckyView.swift */; };
+		662CD94E2844F8E100C43206 /* PictureThumbnailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CD94D2844F8E100C43206 /* PictureThumbnailsViewModel.swift */; };
+		662CD9502844F8E500C43206 /* PictureThumbnailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CD94F2844F8E500C43206 /* PictureThumbnailsView.swift */; };
+		662CD9522844F90300C43206 /* IamFeelingLuckyViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CD9512844F90300C43206 /* IamFeelingLuckyViewModel.swift */; };
+		662CD9552845045B00C43206 /* MagicButtonView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CD9542845045B00C43206 /* MagicButtonView.swift */; };
+		662CD9572845049400C43206 /* MagicButtonViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 662CD9562845049400C43206 /* MagicButtonViewModel.swift */; };
+		6631F2EF2837941B00A1A357 /* asyncyawaituApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631F2EE2837941B00A1A357 /* asyncyawaituApp.swift */; };
+		6631F300283C0B1400A1A357 /* LuckySlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6631F2FF283C0B1400A1A357 /* LuckySlot.swift */; };
+		667B98FC284773D400404065 /* DonationsAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667B98FB284773D300404065 /* DonationsAccountView.swift */; };
+		667B98FE2847753B00404065 /* DonationsAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 667B98FD2847753B00404065 /* DonationsAccountViewModel.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		66206E6E284507E9008819D9 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
+		6625C6B72840F1EB0094D036 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
+		6625C6B92840F2950094D036 /* ThumnailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumnailRepository.swift; sourceTree = "<group>"; };
+		6625C6BB284108FB0094D036 /* UIImage+Merge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Merge.swift"; sourceTree = "<group>"; };
+		6625C6BE2844F6A80094D036 /* LuckGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckGenerator.swift; sourceTree = "<group>"; };
+		6625C6C02844F76E0094D036 /* IamFeelingLuckyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IamFeelingLuckyView.swift; sourceTree = "<group>"; };
+		662CD94D2844F8E100C43206 /* PictureThumbnailsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureThumbnailsViewModel.swift; sourceTree = "<group>"; };
+		662CD94F2844F8E500C43206 /* PictureThumbnailsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PictureThumbnailsView.swift; sourceTree = "<group>"; };
+		662CD9512844F90300C43206 /* IamFeelingLuckyViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IamFeelingLuckyViewModel.swift; sourceTree = "<group>"; };
+		662CD9542845045B00C43206 /* MagicButtonView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicButtonView.swift; sourceTree = "<group>"; };
+		662CD9562845049400C43206 /* MagicButtonViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MagicButtonViewModel.swift; sourceTree = "<group>"; };
+		6631F2EB2837941B00A1A357 /* asyncyawaitu.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = asyncyawaitu.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6631F2EE2837941B00A1A357 /* asyncyawaituApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = asyncyawaituApp.swift; sourceTree = "<group>"; };
+		6631F2FF283C0B1400A1A357 /* LuckySlot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckySlot.swift; sourceTree = "<group>"; };
+		667B98FB284773D300404065 /* DonationsAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsAccountView.swift; sourceTree = "<group>"; };
+		667B98FD2847753B00404065 /* DonationsAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DonationsAccountViewModel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6631F2E82837941B00A1A357 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		6625C6B32840F14B0094D036 /* PictureThumbnails */ = {
+			isa = PBXGroup;
+			children = (
+				662CD94F2844F8E500C43206 /* PictureThumbnailsView.swift */,
+				662CD94D2844F8E100C43206 /* PictureThumbnailsViewModel.swift */,
+				6625C6B92840F2950094D036 /* ThumnailRepository.swift */,
+			);
+			path = PictureThumbnails;
+			sourceTree = "<group>";
+		};
+		6625C6B62840F1E30094D036 /* Tools */ = {
+			isa = PBXGroup;
+			children = (
+				6625C6B72840F1EB0094D036 /* UIImage+Color.swift */,
+				6625C6BB284108FB0094D036 /* UIImage+Merge.swift */,
+			);
+			path = Tools;
+			sourceTree = "<group>";
+		};
+		6625C6BD2844F0DA0094D036 /* LuckySlot */ = {
+			isa = PBXGroup;
+			children = (
+				6631F2FF283C0B1400A1A357 /* LuckySlot.swift */,
+				6625C6BE2844F6A80094D036 /* LuckGenerator.swift */,
+				6625C6C02844F76E0094D036 /* IamFeelingLuckyView.swift */,
+				662CD9512844F90300C43206 /* IamFeelingLuckyViewModel.swift */,
+			);
+			path = LuckySlot;
+			sourceTree = "<group>";
+		};
+		662CD9532845044300C43206 /* MagicButtonView */ = {
+			isa = PBXGroup;
+			children = (
+				662CD9542845045B00C43206 /* MagicButtonView.swift */,
+				662CD9562845049400C43206 /* MagicButtonViewModel.swift */,
+				66206E6E284507E9008819D9 /* Ticker.swift */,
+			);
+			path = MagicButtonView;
+			sourceTree = "<group>";
+		};
+		6631F2E22837941B00A1A357 = {
+			isa = PBXGroup;
+			children = (
+				6631F2ED2837941B00A1A357 /* asyncyawaitu */,
+				6631F2EC2837941B00A1A357 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		6631F2EC2837941B00A1A357 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6631F2EB2837941B00A1A357 /* asyncyawaitu.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6631F2ED2837941B00A1A357 /* asyncyawaitu */ = {
+			isa = PBXGroup;
+			children = (
+				6625C6B32840F14B0094D036 /* PictureThumbnails */,
+				6625C6BD2844F0DA0094D036 /* LuckySlot */,
+				662CD9532845044300C43206 /* MagicButtonView */,
+				667B98FA284773BA00404065 /* BankAccount */,
+				6625C6B62840F1E30094D036 /* Tools */,
+				6631F2EE2837941B00A1A357 /* asyncyawaituApp.swift */,
+			);
+			path = asyncyawaitu;
+			sourceTree = "<group>";
+		};
+		667B98FA284773BA00404065 /* BankAccount */ = {
+			isa = PBXGroup;
+			children = (
+				667B98FB284773D300404065 /* DonationsAccountView.swift */,
+				667B98FD2847753B00404065 /* DonationsAccountViewModel.swift */,
+			);
+			path = BankAccount;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6631F2EA2837941B00A1A357 /* asyncyawaitu */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6631F2F92837942200A1A357 /* Build configuration list for PBXNativeTarget "asyncyawaitu" */;
+			buildPhases = (
+				6631F2E72837941B00A1A357 /* Sources */,
+				6631F2E82837941B00A1A357 /* Frameworks */,
+				6631F2E92837941B00A1A357 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = asyncyawaitu;
+			productName = asyncyawaitu;
+			productReference = 6631F2EB2837941B00A1A357 /* asyncyawaitu.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6631F2E32837941B00A1A357 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1340;
+				LastUpgradeCheck = 1340;
+				TargetAttributes = {
+					6631F2EA2837941B00A1A357 = {
+						CreatedOnToolsVersion = 13.4;
+					};
+				};
+			};
+			buildConfigurationList = 6631F2E62837941B00A1A357 /* Build configuration list for PBXProject "asyncyawaitu" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 6631F2E22837941B00A1A357;
+			productRefGroup = 6631F2EC2837941B00A1A357 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6631F2EA2837941B00A1A357 /* asyncyawaitu */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6631F2E92837941B00A1A357 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6631F2E72837941B00A1A357 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6625C6C12844F76E0094D036 /* IamFeelingLuckyView.swift in Sources */,
+				6631F2EF2837941B00A1A357 /* asyncyawaituApp.swift in Sources */,
+				6631F300283C0B1400A1A357 /* LuckySlot.swift in Sources */,
+				667B98FC284773D400404065 /* DonationsAccountView.swift in Sources */,
+				662CD9552845045B00C43206 /* MagicButtonView.swift in Sources */,
+				662CD9502844F8E500C43206 /* PictureThumbnailsView.swift in Sources */,
+				66206E6F284507E9008819D9 /* Ticker.swift in Sources */,
+				662CD9572845049400C43206 /* MagicButtonViewModel.swift in Sources */,
+				6625C6BC284108FB0094D036 /* UIImage+Merge.swift in Sources */,
+				667B98FE2847753B00404065 /* DonationsAccountViewModel.swift in Sources */,
+				662CD94E2844F8E100C43206 /* PictureThumbnailsViewModel.swift in Sources */,
+				6625C6BA2840F2950094D036 /* ThumnailRepository.swift in Sources */,
+				6625C6BF2844F6A80094D036 /* LuckGenerator.swift in Sources */,
+				662CD9522844F90300C43206 /* IamFeelingLuckyViewModel.swift in Sources */,
+				6625C6B82840F1EB0094D036 /* UIImage+Color.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		6631F2F72837942200A1A357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		6631F2F82837942200A1A357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6631F2FA2837942200A1A357 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B57H46XPVY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = axel.asyncyawaitu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6631F2FB2837942200A1A357 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = B57H46XPVY;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = axel.asyncyawaitu;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6631F2E62837941B00A1A357 /* Build configuration list for PBXProject "asyncyawaitu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6631F2F72837942200A1A357 /* Debug */,
+				6631F2F82837942200A1A357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6631F2F92837942200A1A357 /* Build configuration list for PBXNativeTarget "asyncyawaitu" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6631F2FA2837942200A1A357 /* Debug */,
+				6631F2FB2837942200A1A357 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6631F2E32837941B00A1A357 /* Project object */;
+}
