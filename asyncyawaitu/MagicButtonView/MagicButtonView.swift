@@ -11,7 +11,7 @@ struct MagicButtonView: View {
                 .padding()
             
             Button {
-                Task { viewModel.sendNotification() }
+                viewModel.sendNotification()
             } label: {
                 Text("🪄 Play")
                     .font(.title)
