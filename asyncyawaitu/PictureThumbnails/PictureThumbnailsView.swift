@@ -27,6 +27,11 @@ struct PictureThumbnailsView: View {
             }
         }
         .padding()
-        .onAppear { viewModel.onAppear() }
+        .onAppear {
+            Task { await viewModel.onAppear() }
+        }
+//        .task {
+//            await viewModel.onAppear()
+//        }
     }
 }
