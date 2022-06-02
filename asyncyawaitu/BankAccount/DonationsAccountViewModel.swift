@@ -1,7 +1,11 @@
 import SwiftUI
 
-class BankAccount {
-    private let iban = "FR7630006000011234567890189"
+final class BankDetails: Sendable {
+    let iban = "FR7630006000011234567890189"
+}
+
+actor BankAccount {
+    private let details = BankDetails()
     
     private(set) var balance = 0
     
@@ -10,10 +14,10 @@ class BankAccount {
         return balance
     }
     
-    func bankDetails() -> String { iban }
+    nonisolated func bankDetails() -> String { details.iban }
 }
 
-class DonationsViewModel: ObservableObject {
+@MainActor class DonationsViewModel: ObservableObject {
     @Published var balance: String = "0"
     
     /// Bank Details
@@ -30,36 +34,36 @@ class DonationsViewModel: ObservableObject {
         bankDetails = bankAccount.bankDetails()
     }
     
-    public func receiveDeposits() {
+    public func receiveDeposits() async {
         bankAccount = BankAccount()
-        balance = bankAccount.balance.description
+        balance = await bankAccount.balance.description
         
         for _ in 1...1000 {
             
             /// 1. Global queue
             DispatchQueue.global().async {
-                self.depositAndDisplay()
+                Task {
+                    await self.depositAndDisplay()
+                }
             }
             
             /// 2. Main Queue
-            depositAndDisplay()
+            await depositAndDisplay()
         }
         
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-            self.checkResults()
-        }
-    }
-    
-    public func depositAndDisplay() {
-        let result = bankAccount.deposit()
+        try! await Task.sleep(nanoseconds: 1_000_000_000)
         
-        DispatchQueue.main.async {
-            self.balance = result.description
-        }
+        await self.checkResults()
     }
     
-    public func checkResults() {
-        let actualBalance = bankAccount.balance
+    public func depositAndDisplay() async {
+        let result = await bankAccount.deposit()
+        
+        self.balance = result.description
+    }
+    
+    public func checkResults() async {
+        let actualBalance = await bankAccount.balance
         let expectedBalance = 2 * 1000 * 100
         let difference = expectedBalance - actualBalance
         

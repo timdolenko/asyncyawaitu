@@ -6,8 +6,8 @@ struct asyncyawaituApp: App {
         WindowGroup {
 //            PictureThumbnailsView()
 //            IamFeelingLuckyView()
-            MagicButtonView()
-//            DonationsView()
+//            MagicButtonView()
+            DonationsView()
         }
     }
 }

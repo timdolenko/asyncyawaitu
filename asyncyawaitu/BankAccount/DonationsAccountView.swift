@@ -16,7 +16,7 @@ struct DonationsView: View {
                 .padding()
             
             Button {
-                Task { viewModel.receiveDeposits() }
+                Task { await viewModel.receiveDeposits() }
             } label: {
                 Text("Launch the donation event! 🚀")
             }
