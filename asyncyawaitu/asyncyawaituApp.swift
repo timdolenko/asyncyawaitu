@@ -4,9 +4,9 @@ import SwiftUI
 struct asyncyawaituApp: App {
     var body: some Scene {
         WindowGroup {
-            PictureThumbnailsView()
+//            PictureThumbnailsView()
 //            IamFeelingLuckyView()
-//            MagicButtonView()
+            MagicButtonView()
 //            DonationsView()
         }
     }

@@ -1,5 +1,28 @@
 import Foundation
 
+public class LuckGeneratorAsync: LuckGeneratorDelegate {
+    
+    private lazy var generator: LuckGeneratorLive = {
+        let g = LuckGeneratorLive()
+        g.delegate = self
+        return g
+    }()
+    
+    private var activeContinuation: CheckedContinuation<Bool, Never>?
+    
+    public func play() async -> Bool {
+        
+        return await withCheckedContinuation { continuation in
+            self.activeContinuation = continuation
+            generator.play()
+        }
+    }
+    
+    public func didGetLucky(with generator: LuckGenerator, didGetLucky: Bool) {
+        activeContinuation?.resume(returning: didGetLucky)
+    }
+}
+
 public protocol LuckGeneratorDelegate: AnyObject {
     func didGetLucky(with generator: LuckGenerator, didGetLucky: Bool)
 }

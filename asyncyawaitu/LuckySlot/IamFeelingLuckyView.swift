@@ -10,13 +10,13 @@ struct IamFeelingLuckyView: View {
             .padding()
 
         Button {
-            Task { viewModel.playSlot() }
+            Task { await viewModel.playSlot() }
         } label: {
             Text("Play Slot")
         }
         .padding()
         Button {
-            Task { viewModel.playGenerator() }
+            Task { await viewModel.playGenerator() }
         } label: {
             Text("I am feeling lucky!")
         }

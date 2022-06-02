@@ -1,5 +1,22 @@
 import Foundation
 
+public class TickerAsyncSequenceFactory {
+    
+    func makeAsyncSequence() -> AsyncStream<Int> {
+        AsyncStream(Int.self) { continuation in
+            let ticker = Ticker()
+            
+            ticker.tick = { continuation.yield($0) }
+            
+            continuation.onTermination = { _ in
+                ticker.stop()
+            }
+            
+            ticker.start()
+        }
+    }
+}
+
 public class Ticker {
     
     deinit { print("Deinit Timer") }
