@@ -140,3 +140,5 @@ public func fetchThumbnails() async throws -> [Thumbnail] {
 Group here actually conforms to `AsyncSequence` that we discuss later in the [Part 3](https://github.com/timdolenko/asyncyawaitu/edit/master/3-AsyncSequence.md)! That's why we use `for await in` here. Nothing to worry about!
 
 Okay, now let's run the app! What do we see now? The app is much faster! And have a look in the console - image downloading now happens in parallel!
+
+# [▶️ Module 2/4 - Converting callback and delegate APIs to async/await](https://github.com/timdolenko/asyncyawaitu/blob/master/2-Converting-APIs.md)
