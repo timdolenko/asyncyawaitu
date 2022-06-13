@@ -1,4 +1,4 @@
-# asyncyawaitu
+# Async Await tutorial
 Playground project for async/await
 
 ## Prerequisites:
