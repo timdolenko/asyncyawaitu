@@ -1,5 +1,9 @@
 # Module 1/4
 
+*Learn basics by fetching a bunch of images and displaying thumbnails*
+
+![Simulator Screen Shot - iPhone 13 Pro - 2022-06-13 at 15 09 55](https://user-images.githubusercontent.com/35912614/173361329-f7a67d18-93b9-4d97-8626-d51611d7f7a5.jpeg)
+
 ### 1. [Async/await Basics](https://github.com/timdolenko/asyncyawaitu/edit/master/1-Basics.md#basics)
 ### 2. [Async properties](https://github.com/timdolenko/asyncyawaitu/edit/master/1-Basics.md#async-properties)
 ### 3. [Async let](https://github.com/timdolenko/asyncyawaitu/blob/master/1-3-Task-Groups.md)
