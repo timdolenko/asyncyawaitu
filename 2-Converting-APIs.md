@@ -4,7 +4,7 @@
 
 <img width="352" alt="Screenshot 2022-06-13 at 15 26 01" src="https://user-images.githubusercontent.com/35912614/173363332-c963e186-5b4a-428f-812b-384594f8d4ad.png">
 
-### 1. [Callback API to async/await](https://github.com/timdolenko/asyncyawaitu/edit/master/2-Converting-APIs.md)
+### 1. [Callback API to async/await](https://github.com/timdolenko/asyncyawaitu/blob/master/2-Converting-APIs.md#converting-callback-api-to-asyncawait)
 ### 2. [Delegate API to async/await](https://github.com/timdolenko/asyncyawaitu/edit/master/2-Converting-APIs.md)
 ### 3. [MainActor replacing DispatchQueue.main.async](https://github.com/timdolenko/asyncyawaitu/edit/master/2-Converting-APIs.md)
 
