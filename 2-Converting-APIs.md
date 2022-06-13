@@ -5,8 +5,8 @@
 <img width="352" alt="Screenshot 2022-06-13 at 15 26 01" src="https://user-images.githubusercontent.com/35912614/173363332-c963e186-5b4a-428f-812b-384594f8d4ad.png">
 
 ### 1. [Callback API to async/await](https://github.com/timdolenko/asyncyawaitu/blob/master/2-Converting-APIs.md#converting-callback-api-to-asyncawait)
-### 2. [Delegate API to async/await](https://github.com/timdolenko/asyncyawaitu/edit/master/2-Converting-APIs.md)
-### 3. [MainActor replacing DispatchQueue.main.async](https://github.com/timdolenko/asyncyawaitu/edit/master/2-Converting-APIs.md)
+### 2. [MainActor](https://github.com/timdolenko/asyncyawaitu/edit/master/2-Converting-APIs.md)
+### 3. [Delegate API to async/await](https://github.com/timdolenko/asyncyawaitu/edit/master/2-Converting-APIs.md)
 
 ## Converting callback API to async/await
 
@@ -140,4 +140,116 @@ Button {
 }
 ```
 
-And run! It still works!
+And run! It still works! But there's an issue, now we update UI from the background thread! Ooops.
+<img width="763" alt="Screenshot 2022-06-13 at 15 47 50" src="https://user-images.githubusercontent.com/35912614/173368102-971a1203-b2d8-4a3e-99ed-6a387938f8a0.png">
+
+## Main Actor
+
+Okay, it's time to introduce `MainActor`! Add `@MainActor` to the view model's class definition:
+```swift
+@MainActor class IamFeelingLuckyViewModel: ObservableObject {
+```
+Run the app! Problem is gone! We will discuss specifics of actors in the part 4, but what you need to know now is that adding `@MainActor` to class definitions moves all properties modifications to the main thread. You can also mark with `@MainActor` separate functions or properies of the class.
+
+## Converting delegate API to async/await
+
+Let's now go and wrap `LuckGenerator`!
+
+How it looks now:
+```swift
+public protocol LuckGeneratorDelegate: AnyObject {
+    func didGetLucky(with generator: LuckGenerator, didGetLucky: Bool)
+}
+
+public protocol LuckGenerator: AnyObject {
+    
+    var delegate: LuckGeneratorDelegate? { get set }
+    
+    /// If you're lucky delegate's `didGetLucky` method will be called
+    func play()
+}
+
+// MARK: - Implementation
+
+public class LuckGeneratorLive: LuckGenerator {
+    public weak var delegate: LuckGeneratorDelegate?
+    
+    public init() {}
+    
+    public func play() {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.125) { [weak self] in
+            guard let `self` = self else { return }
+            
+            let didGetLucky = Int.random(in: 1...3) == 3
+            
+            self.delegate?.didGetLucky(with: self, didGetLucky: didGetLucky)
+        }
+    }
+}
+```
+
+Let's try the same trick:
+```swift
+public class LuckGeneratorAsync: LuckGeneratorDelegate {
+    
+    private let generator: LuckGenerator
+    
+    public init(generator: LuckGenerator = LuckGeneratorLive()) {
+        self.generator = generator
+        
+        // Don't forget to set the delegate!
+        generator.delegate = self
+    }
+    
+    public func play() async -> Bool {
+        await withCheckedContinuation { continuation in 
+            
+        }
+    }
+    
+    public func didGetLucky(with generator: LuckGenerator, didGetLucky: Bool) {
+        
+    }
+}
+```
+Now what? Just store the continuation to make it accessible inside the delegate's `didGetLucky`:
+```swift
+private var activeContinuation: CheckedContinuation<Bool, Never>?
+...
+
+await withCheckedContinuation { continuation in
+    self.activeContinuation = continuation
+    generator.play()
+}
+...
+
+public func didGetLucky(with generator: LuckGenerator, didGetLucky: Bool) {
+    activeContinuation?.resume(returning: didGetLucky)
+}
+```
+
+Well, that's all we had to do! Of course, viewModel has to be updated too:
+```swift
+private let luckGenerator = LuckGeneratorAsync()
+
+init() {}
+```
+We don't need delegate no more! Remove `extension IamFeelingLuckyViewModel: LuckGeneratorDelegate { ... }`. And finally update `func playGenerator()`.
+
+```swift
+func playGenerator() async {
+    let didGetLucky = await luckGenerator.play()
+
+    guard didGetLucky else { return }
+
+    isDisplayingJackpot = true
+}
+```
+And inside the view:
+```swift
+Task { await viewModel.playGenerator() }
+```
+
+Run the app!
+
+# [▶️ Module 3/4 - AsyncSequence](https://github.com/timdolenko/asyncyawaitu/blob/master/3-AsyncSequence.md)
