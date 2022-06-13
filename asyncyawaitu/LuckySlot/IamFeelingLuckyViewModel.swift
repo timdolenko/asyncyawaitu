@@ -9,7 +9,9 @@ import Foundation
     let slot = LuckySlotLive()
     private let luckGenerator = LuckGeneratorLive()
     
-    init() {}
+    init() {
+        luckGenerator.delegate = self
+    }
     
     func playSlot() {
         slot.play { [weak self] result in
