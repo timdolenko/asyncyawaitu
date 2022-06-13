@@ -116,20 +116,20 @@
 				6625C6B32840F14B0094D036 /* PictureThumbnails */,
 				6625C6BD2844F0DA0094D036 /* LuckySlot */,
 				662CD9532845044300C43206 /* MagicButtonView */,
-				667B98FA284773BA00404065 /* BankAccount */,
+				667B98FA284773BA00404065 /* DonationsAccount */,
 				6625C6B62840F1E30094D036 /* Tools */,
 				6631F2EE2837941B00A1A357 /* asyncyawaituApp.swift */,
 			);
 			path = asyncyawaitu;
 			sourceTree = "<group>";
 		};
-		667B98FA284773BA00404065 /* BankAccount */ = {
+		667B98FA284773BA00404065 /* DonationsAccount */ = {
 			isa = PBXGroup;
 			children = (
 				667B98FB284773D300404065 /* DonationsAccountView.swift */,
 				667B98FD2847753B00404065 /* DonationsAccountViewModel.swift */,
 			);
-			path = BankAccount;
+			path = DonationsAccount;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
