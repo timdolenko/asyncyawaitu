@@ -1,8 +1,9 @@
 # Module 1/4
 
-## 1. [Async/await Basics](https://github.com/timdolenko/asyncyawaitu/edit/master/1-Basics.md#basics)
-## 2. [Async properties](https://github.com/timdolenko/asyncyawaitu/edit/master/1-Basics.md#async-properties)
-## 3. [Task Groups](https://github.com/timdolenko/asyncyawaitu/blob/master/1-3-Task-Groups.md)
+### 1. [Async/await Basics](https://github.com/timdolenko/asyncyawaitu/edit/master/1-Basics.md#basics)
+### 2. [Async properties](https://github.com/timdolenko/asyncyawaitu/edit/master/1-Basics.md#async-properties)
+### 3. [Async let](https://github.com/timdolenko/asyncyawaitu/blob/master/1-3-Task-Groups.md)
+### 4. [Task Groups](https://github.com/timdolenko/asyncyawaitu/blob/master/1-3-Task-Groups.md#task-groups)
 
 ## Basics
 
@@ -231,4 +232,4 @@ to:
 guard let thumbnail = await UIImage(data: data)?.thumbnail else { throw FetchError.badImage }
 ```
 
-# [▶️ Task Groups](https://github.com/timdolenko/asyncyawaitu/blob/master/1-3-Task-Groups.md)
+# [▶️ Async let and Task Groups](https://github.com/timdolenko/asyncyawaitu/blob/master/1-3-Task-Groups.md)
