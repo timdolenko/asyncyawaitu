@@ -1,6 +1,14 @@
-# Part 1
-1. Have a look into view and view model of `PictureThumbnails`
-2. Have a look into `fetchThumbnail` in `ThumnailRepositoryLive`
+# Module 1/4
+
+## 1. [Async/await Basics](https://github.com/timdolenko/asyncyawaitu/edit/master/1-Basics.md#basics)
+## 2. [Async properties](https://github.com/timdolenko/asyncyawaitu/edit/master/1-Basics.md#async-properties)
+## 3. [Task Groups](https://github.com/timdolenko/asyncyawaitu/blob/master/1-3-Task-Groups.md)
+
+## Basics
+
+Have a look into view and view model of `PictureThumbnails`
+
+Then let's have a look into `fetchThumbnail` in `ThumnailRepositoryLive`
 
 ```swift
 public func fetchThumbnail(for id: String, completion: @escaping (Result<Thumbnail, Error>) -> Void) {
@@ -31,14 +39,14 @@ public func fetchThumbnail(for id: String, completion: @escaping (Result<Thumbna
 ```
 
 That looks ugly! Or like a normal async code with callbacks:
-1) Easy to make mistakes and forget to call completions
-2) Can't use `throw` error handling
+1) **Easy to make mistakes and forget to call completions**
+2) **Can't use `throw` error handling**
 
 [More on "why async await?"](https://github.com/apple/swift-evolution/blob/main/proposals/0296-async-await.md#motivation-completion-handlers-are-suboptimal)
 
-3. Let's create our first async function by refactoring this function!
+## First async function
 
-Let's start with the signature:
+Let's create our first async function by refactoring this function! Let's start with the signature:
 
 ```swift
 public func fetchThumbnail(for id: String)
@@ -187,7 +195,7 @@ public func onAppear() async {
 
 The project still doesn't compile! Let's go to the view now!
 
-`'async' call in a function that does not support concurrency` scream at us!
+`'async' call in a function that does not support concurrency` screams at us!
 
 How can we convert `.onAppear {}` to be async? - We can't! We use `Task` instead!
 ```swift
@@ -197,3 +205,30 @@ How can we convert `.onAppear {}` to be async? - We can't! We use `Task` instead
 ```
 We dispatch a task (aka call an async function) this way from `non-async` context. It's a bridge between `async` and `non-async` worlds (and not only that).
 Let's run the app now to see it work!
+
+## Async properties
+
+Now, final bit of refactoring, let's go back to `ThumbnailRepository.swift` and let's explore async properties! Add:
+
+```swift
+extension UIImage {
+    var thumbnail: UIImage? {
+        get async {
+            await byPreparingThumbnail(ofSize: Thumbnail.size)
+        }
+    }
+}
+```
+
+Let's use it it `fetchThumbnail`:
+
+```swift
+guard let thumbnail = await UIImage(data: data)?
+    .byPreparingThumbnail(ofSize: Thumbnail.size) else { throw FetchError.badImage }
+```
+to:
+```swift
+guard let thumbnail = await UIImage(data: data)?.thumbnail else { throw FetchError.badImage }
+```
+
+# [▶️ Task Groups](https://github.com/timdolenko/asyncyawaitu/blob/master/1-3-Task-Groups.md)
