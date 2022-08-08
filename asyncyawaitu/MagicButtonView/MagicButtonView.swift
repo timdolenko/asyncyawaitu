@@ -11,14 +11,6 @@ struct MagicButtonView: View {
                 .padding()
             
             Button {
-                viewModel.sendNotification()
-            } label: {
-                Text("🪄 Play")
-                    .font(.title)
-            }
-            .padding()
-            
-            Button {
                 viewModel.cancel()
             } label: {
                 Text("🗑 Unsubscribe")

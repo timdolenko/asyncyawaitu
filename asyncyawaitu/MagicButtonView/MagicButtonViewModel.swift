@@ -1,13 +1,13 @@
 import Foundation
 
-class MagicButtonViewModel: ObservableObject {
+@MainActor class MagicButtonViewModel: ObservableObject {
     
     @Published var output: String = "🙈"
     
-    private let center = NotificationCenter.default
+    private var subscription: Task<(), Error>!
     
-    public func sendNotification() {
-        center.post(name: .asyncAwaity, object: nil)
+    init() {
+        subscription = Task {}
     }
     
     private func present(_ result: String) async throws {
@@ -17,11 +17,5 @@ class MagicButtonViewModel: ObservableObject {
         output = "🙈"
     }
     
-    public func cancel() {}
-}
-
-extension Notification.Name {
-    static var asyncAwaity: Self {
-        Self(rawValue: "asyncAwaity")
-    }
+    public func cancel() { subscription.cancel() }
 }
