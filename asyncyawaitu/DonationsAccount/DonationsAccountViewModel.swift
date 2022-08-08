@@ -1,11 +1,7 @@
 import SwiftUI
 
-final class BankDetails: Sendable {
-    let iban = "FR7630006000011234567890189"
-}
-
 actor BankAccount {
-    private let details = BankDetails()
+    private let iban = "FR7630006000011234567890189"
     
     private(set) var balance = 0
     
@@ -14,7 +10,7 @@ actor BankAccount {
         return balance
     }
     
-    nonisolated func bankDetails() -> String { details.iban }
+    nonisolated func bankDetails() -> String { iban }
 }
 
 @MainActor class DonationsViewModel: ObservableObject {
@@ -52,7 +48,7 @@ actor BankAccount {
         }
         
         try! await Task.sleep(nanoseconds: 1_000_000_000)
-        
+
         await self.checkResults()
     }
     
