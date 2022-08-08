@@ -1,6 +1,6 @@
 import Foundation
 
-@MainActor class IamFeelingLuckyViewModel: ObservableObject {
+class IamFeelingLuckyViewModel: ObservableObject {
     
     @Published var lastResult: String = "🙈🙈🙈"
     @Published var isDisplayingError: Bool = false
