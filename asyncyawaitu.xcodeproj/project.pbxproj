@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		66206E6F284507E9008819D9 /* Ticker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66206E6E284507E9008819D9 /* Ticker.swift */; };
 		6625C6B82840F1EB0094D036 /* UIImage+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6B72840F1EB0094D036 /* UIImage+Color.swift */; };
-		6625C6BA2840F2950094D036 /* ThumnailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6B92840F2950094D036 /* ThumnailRepository.swift */; };
+		6625C6BA2840F2950094D036 /* ThumbnailRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6B92840F2950094D036 /* ThumbnailRepository.swift */; };
 		6625C6BC284108FB0094D036 /* UIImage+Merge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6BB284108FB0094D036 /* UIImage+Merge.swift */; };
 		6625C6BF2844F6A80094D036 /* LuckGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6BE2844F6A80094D036 /* LuckGenerator.swift */; };
 		6625C6C12844F76E0094D036 /* IamFeelingLuckyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6625C6C02844F76E0094D036 /* IamFeelingLuckyView.swift */; };
@@ -27,7 +27,7 @@
 /* Begin PBXFileReference section */
 		66206E6E284507E9008819D9 /* Ticker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Ticker.swift; sourceTree = "<group>"; };
 		6625C6B72840F1EB0094D036 /* UIImage+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Color.swift"; sourceTree = "<group>"; };
-		6625C6B92840F2950094D036 /* ThumnailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumnailRepository.swift; sourceTree = "<group>"; };
+		6625C6B92840F2950094D036 /* ThumbnailRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThumbnailRepository.swift; sourceTree = "<group>"; };
 		6625C6BB284108FB0094D036 /* UIImage+Merge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Merge.swift"; sourceTree = "<group>"; };
 		6625C6BE2844F6A80094D036 /* LuckGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LuckGenerator.swift; sourceTree = "<group>"; };
 		6625C6C02844F76E0094D036 /* IamFeelingLuckyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IamFeelingLuckyView.swift; sourceTree = "<group>"; };
@@ -59,7 +59,7 @@
 			children = (
 				662CD94F2844F8E500C43206 /* PictureThumbnailsView.swift */,
 				662CD94D2844F8E100C43206 /* PictureThumbnailsViewModel.swift */,
-				6625C6B92840F2950094D036 /* ThumnailRepository.swift */,
+				6625C6B92840F2950094D036 /* ThumbnailRepository.swift */,
 			);
 			path = PictureThumbnails;
 			sourceTree = "<group>";
@@ -116,20 +116,20 @@
 				6625C6B32840F14B0094D036 /* PictureThumbnails */,
 				6625C6BD2844F0DA0094D036 /* LuckySlot */,
 				662CD9532845044300C43206 /* MagicButtonView */,
-				667B98FA284773BA00404065 /* BankAccount */,
+				667B98FA284773BA00404065 /* DonationsAccount */,
 				6625C6B62840F1E30094D036 /* Tools */,
 				6631F2EE2837941B00A1A357 /* asyncyawaituApp.swift */,
 			);
 			path = asyncyawaitu;
 			sourceTree = "<group>";
 		};
-		667B98FA284773BA00404065 /* BankAccount */ = {
+		667B98FA284773BA00404065 /* DonationsAccount */ = {
 			isa = PBXGroup;
 			children = (
 				667B98FB284773D300404065 /* DonationsAccountView.swift */,
 				667B98FD2847753B00404065 /* DonationsAccountViewModel.swift */,
 			);
-			path = BankAccount;
+			path = DonationsAccount;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -211,7 +211,7 @@
 				6625C6BC284108FB0094D036 /* UIImage+Merge.swift in Sources */,
 				667B98FE2847753B00404065 /* DonationsAccountViewModel.swift in Sources */,
 				662CD94E2844F8E100C43206 /* PictureThumbnailsViewModel.swift in Sources */,
-				6625C6BA2840F2950094D036 /* ThumnailRepository.swift in Sources */,
+				6625C6BA2840F2950094D036 /* ThumbnailRepository.swift in Sources */,
 				6625C6BF2844F6A80094D036 /* LuckGenerator.swift in Sources */,
 				662CD9522844F90300C43206 /* IamFeelingLuckyViewModel.swift in Sources */,
 				6625C6B82840F1EB0094D036 /* UIImage+Color.swift in Sources */,

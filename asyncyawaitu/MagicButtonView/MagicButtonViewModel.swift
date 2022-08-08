@@ -6,34 +6,31 @@ import Foundation
     
     private let center = NotificationCenter.default
     
-    private lazy var subscription: Task<(), Error> = subscribe()
+    private var subscription: Task<(), Error>!
     
     init() {
-        _ = subscription
+//        subscription = Task {
+//            let sequence = TickerAsyncSequenceFactory().makeAsyncSequence()
+//            for await number in sequence {
+//                try await present("⏰ \(number) ⏰")
+//            }
+//        }
+//        
+//        subscription = Task {
+//            for await _ in center.notifications(named: .asyncAwaity) {
+//                try await present(LuckySlotItem.random())
+//            }
+//        }
+//        
+        subscription = Task {
+            let _ = await center.notifications(named: .asyncAwaity).first(where: { _ in true })
+
+            try await present("Only first")
+        }
     }
     
     public func sendNotification() {
         center.post(name: .asyncAwaity, object: nil)
-    }
-    
-    public func subscribe() -> Task<(), Error> {
-        
-//        Task {
-//            for await _ in center.notifications(named: .asyncAwaity) {
-//                try await present("Magic \(LuckySlotItem.allCases.randomElement()!.rawValue)")
-//            }
-//        }
-        
-//        Task {
-//            let _ = await center.notifications(named: .asyncAwaity)
-//            try await present("Got first!")
-//        }
-        
-        Task {
-            for await number in TickerAsyncSequenceFactory().makeAsyncSequence() {
-                try await present("⏰ \(number) ⏰")
-            }
-        }
     }
     
     private func present(_ result: String) async throws {
@@ -43,8 +40,12 @@ import Foundation
         output = "🙈"
     }
     
-    public func cancel() {
-        subscription.cancel()
+    public func cancel() { subscription.cancel() }
+}
+
+extension LuckySlotItem {
+    static func random() -> String {
+        allCases.randomElement()!.rawValue
     }
 }
 
