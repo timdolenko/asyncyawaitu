@@ -135,6 +135,7 @@ Let's go to the view now!
 ```swift
 .onAppear { viewModel.onAppear() }
 ```
+<img width="1079" alt="Screenshot 2022-08-15 at 16 53 47" src="https://user-images.githubusercontent.com/35912614/184659292-ded644d9-658e-48c9-b0d6-28dbbdae2511.png">
 
 `'async' call in a function that does not support concurrency` screams at us!
 
