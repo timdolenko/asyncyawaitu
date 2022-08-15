@@ -164,7 +164,7 @@ extension UIImage {
 }
 ```
 
-Let's use it it `fetchThumbnail`:
+Let's use it in `fetchThumbnail`:
 
 ```swift
 guard let thumbnail = await UIImage(data: data)?.thumbnail else { throw FetchError.badImage }
