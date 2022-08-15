@@ -287,7 +287,7 @@ Now let's run the app! What do we see now? The app is much faster! And have a lo
 
 In the [example project](https://github.com/timdolenko/asyncyawaitu) we have 2 classes that represent `delegate` and `callback` APIs. Let's see how we provide async/await interface around them.
 
-Here's our delegate API:
+Here's our callback API:
 
 ```swift
 public enum LuckySlotItem: String, CaseIterable {
