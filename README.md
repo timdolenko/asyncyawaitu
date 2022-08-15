@@ -2,6 +2,8 @@ Async/await was introduced in Swift 5.5 and if you still not sure how to use it 
 
 We'll cover most of the real use cases with practical examples. Let's kick off!
 
+<a href="https://www.youtube.com/watch?v=aZ6w3HH1t0w"><img width="215" alt="Screenshot 2022-08-15 at 15 55 41" src="https://user-images.githubusercontent.com/35912614/184648965-bbca0620-a3f2-4524-b249-6f94217f8c7a.png"></a>
+
 ### Here's what we will cover:
 1. `async` functions
 2. `async get` properties
